@@ -31,7 +31,7 @@ jobs:
         with:
           github-token: ${{ secrets.PAT_TOKEN }}
           script: |
-            await github.rest.actions.createDispatchEvent({
+            await github.rest.repos.createDispatchEvent({
               owner: 'SeisSCOPED',
               repo: 'pysep',
               event_type: 'build_container'
