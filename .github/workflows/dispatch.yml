@@ -25,4 +25,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          curl -XPOST -u "wangyinz:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/SeisSCOPED/pysep/dispatches --data '{"event_type": "build_container"}'
+          curl -XPOST -H "Authorization: Bearer ${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/SeisSCOPED/pysep/dispatches --data '{"event_type": "build_container"}'
